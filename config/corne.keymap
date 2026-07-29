@@ -41,8 +41,8 @@
      * ───────────────────────────────────────────────────────────── */
 
     behaviors {
-
         /* tap = character  ·  hold = modifier */
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -54,6 +54,7 @@
         };
 
         /* single tap = (  ·  double tap = ) */
+
         td_paren: tap_dance_paren {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_PAREN";
@@ -63,6 +64,7 @@
         };
 
         /* single tap = [  ·  double tap = ] */
+
         td_bkt: tap_dance_bracket {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_BRACKET";
@@ -72,6 +74,7 @@
         };
 
         /* single tap = {  ·  double tap = } */
+
         td_brc: tap_dance_brace {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_BRACE";
@@ -96,14 +99,20 @@
             key-positions = <1 2>;
         };
 
-        del {
-            bindings = <&kp DELETE>;
-            key-positions = <10 22>;
+        agudo {
+            bindings = <&kp GRAVE>;
+            key-positions = <22 21>;
         };
 
         caps {
             bindings = <&kp CAPS>;
-            key-positions = <12 13>;
+            key-positions = <25 26>;
+        };
+
+        circunflexo {
+            bindings = <&kp CARET>;
+            key-positions = <34 33>;
+            timeout-ms = <50>;
         };
     };
 
@@ -128,10 +137,10 @@
 
         default_layer {
             bindings = <
-&none  &kp Q           &kp W  &kp E      &kp R        &kp T             &kp Y            &kp U        &kp I                  &kp O                   &kp P                      &none
-&none  &kp A           &kp S  &kp D      &kp F        &kp G             &kp H            &kp J        &hm RIGHT_CONTROL K    &kp L                   &hm PT_TILDE PT_C_CEDILLA  &none
-&none  &hm LEFT_GUI Z  &kp X  &kp C      &kp V        &kp B             &kp B            &kp N        &kp M                  &hm PT_BACKSLASH COMMA  &hm PT_SLASH PERIOD        &none
-                              &lt 4 TAB  &lt 1 SPACE  &kp LEFT_SHIFT    &lt 2 BACKSPACE  &lt 3 ENTER  &kp BACKSPACE
+&none  &kp Q           &kp W  &kp E      &kp R        &kp T             &kp Y            &kp U        &kp I                &kp O                   &kp P                      &none
+&none  &kp A           &kp S  &kp D      &kp F        &kp G             &kp H            &kp J        &hm RIGHT_CONTROL K  &kp L                   &hm PT_TILDE PT_C_CEDILLA  &none
+&none  &hm LEFT_GUI Z  &kp X  &kp C      &kp V        &kp B             &kp B            &kp N        &kp M                &hm PT_BACKSLASH COMMA  &hm PT_SLASH PERIOD        &none
+                              &lt 1 TAB  &lt 1 SPACE  &kp LEFT_SHIFT    &lt 2 BACKSPACE  &lt 3 SPACE  &kp ENTER
             >;
         };
 
@@ -148,10 +157,10 @@
 
         lower_layer {
             bindings = <
-&none  &kp N1           &kp N2     &kp N3    &kp N4       &kp N5       &kp N6           &kp N7         &kp N8        &kp N9                &kp N0                 &none
-&none  &kp EXCLAMATION  &kp AT     &kp HASH  &kp DOLLAR   &kp PERCENT  &kp PT_CARET     &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
-&none  &kp EQUAL        &kp MINUS  &kp PLUS  &kp PT_LBRC  &kp PT_RBRC  &kp PT_LBKT      &kp PT_RBKT    &kp PT_SEMI   &kp PT_COLON          &hm PT_BACKSLASH PT_SLASH  &none
-                                   &trans    &trans       &trans       &trans           &trans         &trans
+&none  &kp N1           &kp N2     &kp N3    &kp N4       &kp N5         &kp N6        &kp N7         &kp N8        &kp N9                &kp N0                     &none
+&none  &kp EXCLAMATION  &kp AT     &kp HASH  &kp DOLLAR   &kp PERCENT    &kp PT_CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS      &none
+&none  &kp EQUAL        &kp MINUS  &kp PLUS  &kp PT_LBRC  &kp PT_RBRC    &kp PT_LBKT   &kp PT_RBKT    &kp PT_SEMI   &kp PT_COLON          &hm PT_BACKSLASH PT_SLASH  &none
+                                   &trans    &trans       &trans         &trans        &trans         &trans
             >;
         };
 
@@ -172,9 +181,9 @@
 
         raise_layer {
             bindings = <
-&none  &kp EXCL       &kp AT       &kp HASH          &kp DLLR   &kp PRCNT    &kp PT_CARET  &kp AMPS      &kp ASTRK     &kp LPAR     &kp RPAR      &none
-&none  &kp PT_PIPE    &kp UNDER    &kp MINUS         &kp EQUAL  &kp PLUS     &kp PT_LBRC   &kp PT_RBRC   &kp PT_LBKT   &kp PT_RBKT  &kp PT_ACUTE  &none
-&none  &kp PT_GRAVE   &kp PT_CARET &kp PT_BACKSLASH  &kp LT     &kp GT       &kp PT_QMARK  &kp PT_DQT    &kp PT_COLON  &kp PT_SEMI  &kp DOT       &none
+&none  &kp EXCL      &kp AT        &kp HASH          &kp DLLR   &kp PRCNT    &kp PT_CARET  &kp AMPS      &kp ASTRK     &kp LPAR     &kp RPAR      &none
+&none  &kp PT_PIPE   &kp UNDER     &kp MINUS         &kp EQUAL  &kp PLUS     &kp PT_LBRC   &kp PT_RBRC   &kp PT_LBKT   &kp PT_RBKT  &kp PT_ACUTE  &none
+&none  &kp PT_GRAVE  &kp PT_CARET  &kp PT_BACKSLASH  &kp LT     &kp GT       &kp PT_QMARK  &kp PT_DQT    &kp PT_COLON  &kp PT_SEMI  &kp DOT       &none
                                    &trans            &trans     &trans       &trans        &kp PT_SLASH  &kp PT_SQT
             >;
         };
@@ -190,10 +199,10 @@
 
         adjust_layer {
             bindings = <
-&none  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5    &trans  &trans          &kp UP_ARROW    &trans      &trans  &none
-&none  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10   &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT   &trans  &none
-&none  &kp F11  &kp F12  &trans  &trans  &trans    &trans  &trans          &trans          &trans      &trans  &none
-                         &trans  &trans  &trans    &trans  &trans          &bootloader
+&none  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &trans  &trans          &kp UP_ARROW    &trans     &trans  &none
+&none  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &none
+&none  &kp F11  &kp F12  &trans  &trans  &trans     &trans  &trans          &trans          &trans     &trans  &none
+                         &trans  &trans  &trans     &trans  &trans          &bootloader
             >;
         };
 
