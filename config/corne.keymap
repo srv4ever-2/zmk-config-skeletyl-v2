@@ -120,7 +120,7 @@
 
         printscreen {
             bindings = <&lt 4 PRINTSCREEN>;
-            key-positions = <0 11>;
+            key-positions = <34 25>;
             timeout-ms = <5>;
         };
     };
@@ -211,7 +211,7 @@
 &none  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &trans  &trans          &kp UP_ARROW    &trans     &trans  &none
 &none  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &none
 &none  &kp F11  &kp F12  &trans  &trans  &trans     &trans  &trans          &trans          &trans     &trans  &none
-                         &trans  &trans  &trans     &trans  &trans          &bootloader
+                         &trans  &trans  &trans     &trans  &trans          &trans
             >;
         };
 
