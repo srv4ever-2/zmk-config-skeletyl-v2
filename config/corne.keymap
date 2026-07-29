@@ -97,26 +97,31 @@
         esc {
             bindings = <&kp ESC>;
             key-positions = <1 2>;
+            timeout-ms = <5>;
         };
 
         agudo {
             bindings = <&kp GRAVE>;
             key-positions = <22 21>;
+            timeout-ms = <5>;
         };
 
         caps {
             bindings = <&kp CAPS>;
             key-positions = <25 26>;
+            timeout-ms = <5>;
         };
 
         circunflexo {
             bindings = <&kp CARET>;
             key-positions = <34 33>;
+            timeout-ms = <5>;
         };
 
         printscreen {
             bindings = <&lt 4 PRINTSCREEN>;
             key-positions = <0 11>;
+            timeout-ms = <5>;
         };
     };
 
