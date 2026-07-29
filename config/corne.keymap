@@ -144,7 +144,7 @@
          *       TAB  SPC       │  BSP  ENT
          * ══════════════════════════════════════════════════════════ */
 
-        Default {
+        default {
             bindings = <
 &none  &kp Q           &kp W  &kp E      &kp R         &kp T             &kp Y            &kp U        &kp I                &kp O                   &kp P                      &none
 &none  &kp A           &kp S  &kp D      &kp F         &kp G             &kp H            &kp J        &hm RIGHT_CONTROL K  &kp L                   &hm PT_TILDE PT_C_CEDILLA  &none
@@ -164,7 +164,7 @@
          * All symbol keycodes use PT_* for correct ABNT2 output.
          * ══════════════════════════════════════════════════════════ */
 
-        Numbers+Symbols {
+        numbers_and_symbols {
             bindings = <
 &none  &kp N1           &kp N2     &kp N3    &kp N4       &kp N5         &kp N6        &kp N7         &kp N8        &kp N9                &kp N0                     &none
 &none  &kp EXCLAMATION  &kp AT     &kp HASH  &kp DOLLAR   &kp PERCENT    &kp PT_CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS      &none
@@ -188,7 +188,7 @@
          *   ~  dead tilde  (base hold)   →  ã õ
          * ══════════════════════════════════════════════════════════ */
 
-        Symbols {
+        other_symbols {
             bindings = <
 &none  &kp EXCL      &kp AT        &kp HASH          &kp DLLR   &kp PRCNT    &kp PT_CARET  &kp AMPS      &kp ASTRK     &kp LPAR     &kp RPAR      &none
 &none  &kp PT_PIPE   &kp UNDER     &kp MINUS         &kp EQUAL  &kp PLUS     &kp PT_LBRC   &kp PT_RBRC   &kp PT_LBKT   &kp PT_RBKT  &kp PT_ACUTE  &none
@@ -206,7 +206,7 @@
          *             _    _    _  │  _    _   BOOT
          * ══════════════════════════════════════════════════════════ */
 
-        F1-F12+Arrows {
+        fkeys_and_arrows {
             bindings = <
 &none  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &none  &none           &kp UP_ARROW    &none      &none  &none
 &none  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none  &none
@@ -233,7 +233,7 @@
             >;
         };
 
-        Numpad {
+        numpad {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans  &trans
