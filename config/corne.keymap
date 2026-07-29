@@ -140,11 +140,11 @@
          *       TAB  SPC       │  BSP  ENT
          * ══════════════════════════════════════════════════════════ */
 
-        default_layer {
+        Default {
             bindings = <
 &none  &kp Q           &kp W  &kp E        &kp R           &kp T             &kp Y            &kp U        &kp I                &kp O                   &kp P                      &none
 &none  &kp A           &kp S  &kp D        &kp F           &kp G             &kp H            &kp J        &hm RIGHT_CONTROL K  &kp L                   &hm PT_TILDE PT_C_CEDILLA  &none
-&none  &hm LEFT_GUI Z  &kp X  &kp C        &kp V           &kp B             &kp B            &kp N        &kp M                &hm PT_BACKSLASH COMMA  &hm PT_SLASH PERIOD        &none
+&none  &hm LEFT_GUI Z  &kp X  &kp C        &kp V           &lt 3 B           &kp B            &kp N        &kp M                &hm PT_BACKSLASH COMMA  &hm PT_SLASH PERIOD        &none
                               &lt 1 LCTRL  &lt 2 LEFT_ALT  &kp LEFT_SHIFT    &lt 2 BACKSPACE  &lt 3 SPACE  &kp ENTER
             >;
         };
@@ -160,7 +160,7 @@
          * All symbol keycodes use PT_* for correct ABNT2 output.
          * ══════════════════════════════════════════════════════════ */
 
-        lower_layer {
+        Numbers+Symbols {
             bindings = <
 &none  &kp N1           &kp N2     &kp N3    &kp N4       &kp N5         &kp N6        &kp N7         &kp N8        &kp N9                &kp N0                     &none
 &none  &kp EXCLAMATION  &kp AT     &kp HASH  &kp DOLLAR   &kp PERCENT    &kp PT_CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS      &none
@@ -184,7 +184,7 @@
          *   ~  dead tilde  (base hold)   →  ã õ
          * ══════════════════════════════════════════════════════════ */
 
-        raise_layer {
+        Symbols {
             bindings = <
 &none  &kp EXCL      &kp AT        &kp HASH          &kp DLLR   &kp PRCNT    &kp PT_CARET  &kp AMPS      &kp ASTRK     &kp LPAR     &kp RPAR      &none
 &none  &kp PT_PIPE   &kp UNDER     &kp MINUS         &kp EQUAL  &kp PLUS     &kp PT_LBRC   &kp PT_RBRC   &kp PT_LBKT   &kp PT_RBKT  &kp PT_ACUTE  &none
@@ -202,7 +202,7 @@
          *             _    _    _  │  _    _   BOOT
          * ══════════════════════════════════════════════════════════ */
 
-        adjust_layer {
+        F1-F12+Arrows {
             bindings = <
 &none  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &trans  &trans          &kp UP_ARROW    &trans     &trans  &none
 &none  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &none
@@ -220,12 +220,21 @@
          *             ×    ×    ×  │  _    ×    ×
          * ══════════════════════════════════════════════════════════ */
 
-        bt_layer {
+        btconfig {
             bindings = <
 &none  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none   &none  &none  &none  &none         &none
 &none  &bt BT_CLR    &bt BT_CLR_ALL  &none         &none         &none           &none   &none  &none  &none  &out OUT_TOG  &none
 &none  &none         &none           &none         &none         &none           &none   &none  &none  &none  &none         &none
                                      &none         &none         &none           &trans  &none  &none
+            >;
+        };
+
+        Numpad {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans           &trans           &kp KP_NUMBER_0
             >;
         };
     };
