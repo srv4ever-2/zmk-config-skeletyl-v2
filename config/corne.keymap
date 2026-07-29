@@ -112,7 +112,6 @@
         circunflexo {
             bindings = <&kp CARET>;
             key-positions = <34 33>;
-            timeout-ms = <50>;
         };
 
         printscreen {
