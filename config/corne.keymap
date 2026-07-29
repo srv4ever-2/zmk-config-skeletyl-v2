@@ -208,10 +208,10 @@
 
         F1-F12+Arrows {
             bindings = <
-&none  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &trans  &trans          &kp UP_ARROW    &trans     &trans  &none
-&none  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &none
-&none  &kp F11  &kp F12  &trans  &trans  &trans     &trans  &trans          &trans          &trans     &trans  &none
-                         &trans  &trans  &trans     &trans  &trans          &trans
+&none  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5     &none  &none           &kp UP_ARROW    &none      &none  &none
+&none  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10    &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none  &none
+&none  &kp F11  &kp F12  &none   &none   &none      &none  &none           &none           &none      &none  &none
+                         &none   &none   &none      &none  &none           &none
             >;
         };
 
