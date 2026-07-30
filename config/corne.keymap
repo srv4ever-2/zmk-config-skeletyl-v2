@@ -91,39 +91,7 @@
      *   Q+A  (12+13) → Caps Lock
      * ───────────────────────────────────────────────────────────── */
 
-    combos {
-        compatible = "zmk,combos";
-
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <1 2>;
-            timeout-ms = <5>;
-        };
-
-        agudo {
-            bindings = <&kp GRAVE>;
-            key-positions = <22 21>;
-            timeout-ms = <5>;
-        };
-
-        caps {
-            bindings = <&kp CAPS>;
-            key-positions = <25 26>;
-            timeout-ms = <5>;
-        };
-
-        circunflexo {
-            bindings = <&kp CARET>;
-            key-positions = <34 33>;
-            timeout-ms = <5>;
-        };
-
-        printscreen {
-            bindings = <&lt 4 PRINTSCREEN>;
-            key-positions = <34 25>;
-            timeout-ms = <5>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     /* ─────────────────────────────────────────────────────────────
      * KEYMAP
@@ -146,10 +114,10 @@
 
         default {
             bindings = <
-&none  &kp Q           &kp W  &kp E      &kp R         &kp T             &kp Y            &kp U        &kp I                &kp O                   &kp P                      &none
-&none  &kp A           &kp S  &kp D      &kp F         &kp G             &kp H            &kp J        &hm RIGHT_CONTROL K  &kp L                   &hm PT_TILDE PT_C_CEDILLA  &none
-&none  &hm LEFT_GUI Z  &kp X  &kp C      &kp V         &lt 5 B           &kp B            &kp N        &kp M                &hm PT_BACKSLASH COMMA  &hm PT_SLASH PERIOD        &none
-                              &kp LCTRL  &kp LEFT_ALT  &kp LEFT_SHIFT    &lt 1 BACKSPACE  &lt 3 SPACE  &kp ENTER
+&none  &kp Q           &kp W  &kp E      &kp R           &kp T               &kp Y            &kp U        &kp I                &kp O                   &kp P                      &none
+&none  &kp A           &kp S  &kp D      &kp F           &kp G               &kp H            &kp J        &hm RIGHT_CONTROL K  &kp L                   &hm PT_TILDE PT_C_CEDILLA  &none
+&none  &hm LEFT_GUI Z  &kp X  &kp C      &kp V           &lt 5 B             &kp B            &kp N        &kp M                &hm PT_BACKSLASH COMMA  &hm PT_SLASH PERIOD        &none
+                              &kp LCTRL  &kp LEFT_SHIFT  &kp LC(LEFT_ALT)    &lt 1 BACKSPACE  &lt 2 SPACE  &lt 3 ENTER
             >;
         };
 
@@ -233,12 +201,12 @@
             >;
         };
 
-        numpad {
+        numpad_and_media {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans           &trans           &kp KP_NUMBER_0
+&trans  &kp ESC       &trans        &kp K_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp DEL   &kp PRINTSCREEN  &trans
+&trans  &kp TAB       &trans        &kp K_BACK        &kp K_PLAY_PAUSE   &kp K_FORWARD      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp HOME  &kp PT_ACUTE     &trans
+&trans  &kp CAPSLOCK  &kp LEFT_WIN  &kp K_CALCULATOR  &trans             &trans             &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp END   &kp CARET        &trans
+                                    &trans            &trans             &trans             &trans           &trans           &kp KP_NUMBER_0
             >;
         };
     };
